@@ -4,12 +4,12 @@ const options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Visual Tracker Application Platform Backend API',
+      title: 'VIZOR viBACK API',
       version: '3.0.0',
       description: 'VTRAPP API',
     },
   },
-  apis: ['routes/backendServices.js'], 
+  apis: ['routes/vBack/routes/backendServices.js'], 
 };
 
 const specs = swaggerJsdoc(options);

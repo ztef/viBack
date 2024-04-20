@@ -9,7 +9,7 @@
 
 var express = require('express');
 const swaggerUi = require('swagger-ui-express');
-const specs = require('./swagger');
+const specs = require('./swagger.cjs');
 const fs = require('fs'); 
 require('dotenv').config();
 var moment = require('moment');
@@ -32,7 +32,7 @@ function isAuthenticated(req, res, next) {
 //router.use(isAuthenticated);
 
 
-const { googleCreds } = require('../GoogleAuthConfig');
+const { googleCreds } = require('../GoogleAuthConfig.cjs');
 
 /*
 try {
@@ -87,7 +87,7 @@ async function getFromSheet(data){
 
 
     //console.log("Hoja : ",SPREADSHEET_ID);
-    //console.log("Creds :", googleCreds);
+    console.log("Creds :", googleCreds);
     //console.log("Creds old :", creds);
     
     const doc = new sheets.GoogleSpreadsheet(SPREADSHEET_ID);
